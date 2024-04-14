@@ -43,6 +43,7 @@ const Home = () => {
         const decodedToken = jwtDecode(token);
         const userId = decodedToken.id;
         const response = await axios.get(`http://localhost:8800/events/accept/${userId}`);
+        console.log(response.data);
         setEvents(response.data);
       } catch (error) {
         console.error('Error fetching events:', error);

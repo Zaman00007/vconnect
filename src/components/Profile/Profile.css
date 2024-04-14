@@ -60,3 +60,31 @@
   .pname{
     color: #2FC3CD;
   }
+
+  .profile-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .profile-post {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-post h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .profile-post p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  
+  

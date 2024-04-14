@@ -83,5 +83,17 @@ router.get('/:id', async (req, res) => {
       res.status(500).json({ message: 'Internal server error' });
     }
   });
+  router.get('/myevent/:id', async (req, res) => {
+    try {
+      // const events = await Accept.find();
+      const user = await User.findById(req.params.id)
+      const eventNames = user.myevents;
+      const events = await Event.find({ eventName: { $in: eventNames } });
+      res.status(200).json(events);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  });
 
 export default router;

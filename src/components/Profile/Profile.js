@@ -9,11 +9,13 @@ import { jwtDecode } from "jwt-decode";
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Edit from './Edit'; 
+import { get } from 'mongoose';
 
 const Profile = () => {
   const [userData, setUserData] = useState(null);
   const [showModal, setShowModal] = useState(false); 
   const history = useHistory();
+  const [events, setEvents] = useState([]);
   const [loggedIn, setLoggedIn] = useState([]);
 
   useEffect(() => {
@@ -24,8 +26,11 @@ const Profile = () => {
         const userId = decodedToken.id;
         console.log("User ID:", userId);
         const response = await axios.get(`http://localhost:8800/users/${userId}`);
-        console.log("User:", response.data.user);
+        const event = await axios.get(`http://localhost:8800/events/myevent/${userId}`);
+        setEvents(event.data);
+        console.log(event.data);
         setUserData(response.data.user);
+        // console.log(userData.myevents);
       } catch (error) {
         console.error('Error fetching friend requests:', error);
       }
@@ -34,6 +39,7 @@ const Profile = () => {
     Logged();
 
   }, []);
+  
 
   const handleEditProfile = () => {
     setShowModal(true); 
@@ -63,7 +69,18 @@ const Profile = () => {
           <p className='pname'>{userData.bio}</p>
         </div>
         <div className="profile-posts">
-
+          {events.map((event, index) => (
+            
+            <div key={index} className="profile-post">
+              {console.log(event)}
+              <h3>{event.eventName}</h3>
+              <p>{event.eventDate}</p>
+              <p>{event.eventTime}</p>
+              <p>{event.eventVenue}</p>
+              <p>{event.maxPeople}</p>
+              <p>{event.description}</p>
+            </div>
+          ))}
         </div>
       </div>
       {showModal && <Edit handleClose={handleCloseModal} userId={loggedIn}/>} 
