@@ -1,4 +1,4 @@
-/* Landing.css */
+
 
 body {
     margin: 0;
@@ -24,7 +24,7 @@ body {
     max-width: 70%;
     width: auto;
     height: auto;
-    max-height: 70vh; /* Limiting image height to 70% of viewport height */
+    max-height: 70vh; 
   }
   
   .right-section {
@@ -71,7 +71,7 @@ body {
   }
 
   
-  /* SignUp1.css */
+  
 
 .landing-container {
     display: flex;
@@ -80,38 +80,32 @@ body {
     height: 100vh;
   }
   
-  .left-section {
-    /* Styles for the left section */
-  }
-  
-  .right-section {
-    /* Styles for the right section */
-  }
+
   
   .connect-text {
     font-family: Arial, sans-serif;
   }
   
   .first-color {
-    font-size: 100px; /* You can adjust the font size as needed */
+    font-size: 100px; 
   }
   
   .second-color {
-    font-size: 24px; /* You can adjust the font size as needed */
+    font-size: 24px; 
   }
   
   .input-field {
-    /* Styles for input fields */
-    border: 1px solid #007bff; /* aceblue color */
+    
+    border: 1px solid #007bff; 
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    width: 300px; /* Adjust width as needed */
+    width: 300px; 
   }
   
   .submit-button {
-    /* Styles for the submit button */
-    background-color: #007bff; /* aceblue color */
+    
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -120,5 +114,5 @@ body {
   }
   
   .submit-button:hover {
-    background-color: #0056b3; /* darker shade of aceblue on hover */
+    background-color: #0056b3; 
   }

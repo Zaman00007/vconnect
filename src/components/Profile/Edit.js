@@ -133,7 +133,7 @@ const Edit = ({ handleClose }) => {
             </div>
 
             <button type="submit">Save Changes</button>
-            {/* <button type="close" onClick={handleClose}>Close</button> */}
+            <button className='close' type="close">Close</button>
           </form>
         </div>
       </div>

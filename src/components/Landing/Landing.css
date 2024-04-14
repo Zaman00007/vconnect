@@ -77,25 +77,25 @@ body {
   border-radius: 7px;
 }
 .input-field {
-  /* Styles for input fields */
-  border: 1px solid #007bff; /* aceblue color */
+  
+  border: 1px solid #007bff; 
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
-  width: 300px; /* Adjust width as needed */
+  width: 300px; 
 }
 
-.submit-button {
-  /* Styles for the submit button */
-  background-color: #007bff; 
-  color: white;
+button {
+  background-color: white;
+  color: #2FC3CD;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
   cursor: pointer;
   margin: 2px;
 }
 
-.submit-button:hover {
-  background-color: #0056b3; 
+button:hover {
+  background-color: #4F2671;
+  color: white;
 }

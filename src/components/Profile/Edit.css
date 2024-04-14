@@ -13,21 +13,15 @@
   }
   
   .modal {
-    background-color: white;
+    background-color: #2e0d3e;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    width: 400px; /* Adjust the width as needed */
+    width: 400px;
+    color: white;
   }
   
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+ 
   
   .modal-content {
     margin-top: 20px;
@@ -50,22 +44,37 @@
     border-radius: 4px;
   }
   
-  /* button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
+  .close{
+    margin: 5px;
+    color: #2FC3CD;
+    background-color: white;
+
+  }
+
+  .close:hover {
+    color: white; 
+    background-color: #4F2671;
+   
   }
   
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  } */
   .close-edit {
     
     background-color: white;
     border: none;
     cursor: pointer;
     z-index: 9999; 
+  }
+
+  button {
+    background-color: white;
+    color: #2FC3CD;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4F2671;
+    color: white;
   }

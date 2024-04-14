@@ -1,4 +1,4 @@
-/* Allevents.css */
+
 .page-container {
     background-color: #220A2E;
     height: 100vh;
@@ -6,20 +6,7 @@
     flex-direction: column;
   }
   
-  /* .navbar {
-    background-color: 2E0D3E;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .navbar-logo{
-    height:10px;
-    width:20px;
-
-
-  } */
 
   .navbar {
     background-color: #2E0D3E;
@@ -29,7 +16,7 @@
   }
   
   .navbar-logo {
-    margin-left: 20px; /* Adjust this margin according to your preference */
+    margin-left: 20px; 
   }
   
   
@@ -59,7 +46,7 @@
 
   .menu-icon {
     cursor: pointer;
-    margin-right: 10px; /* Adjust as needed */
+    margin-right: 10px; 
   }
   
   .menu-icon-white,
@@ -85,7 +72,7 @@
   }
   
   .search-bar::placeholder {
-    color: #ccc; /* Placeholder color */
+    color: #ccc; 
   }
   
   .navbar-icons {
@@ -94,13 +81,13 @@
   }
   
   .navbar-icon {
-    margin-left: 10px; /* Adjust spacing between icons */
+    margin-left: 10px; 
   }
   
   .support-link {
     color: white;
     text-decoration: none;
-    margin-left: 10px; /* Adjust spacing between settings icon and support link */
+    margin-left: 10px; 
   }
   
   .sidebar {
@@ -141,17 +128,13 @@
     padding: 20px;
   }
   
-  .header {
-    /* Your header styles */
-  }
+
   
-  .square-box {
-    /* Your square box styles */
-  }
+ 
 
   .square-box {
     background-color: #2FC3CD;
-    width: calc(33.33% - 20px); /* 33.33% for three boxes in one row, subtracting margin */
+    width: calc(33.33% - 20px); 
     margin: 10px;
     border-radius: 10px;
     padding: 20px;
@@ -278,6 +261,7 @@
   
   .action-buttons button:hover {
     background-color: #4F2671;
+    color: white;
   }
   
   
