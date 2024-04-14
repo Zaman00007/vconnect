@@ -6,12 +6,15 @@ const router = express.Router();
 
 
 
-router.post('/', async (req, res) => {
+router.post('/:id', async (req, res) => {
     console.log(res.body);
     try {
         console.log('POST /events called');
         const eventData = req.body;
         const newEvent = new Event(eventData);
+        const user = await User.findById(req.params.id);
+        user.accepted.push(eventData.eventName);
+        await user.save();
         await newEvent.save();
         res.status(201).json(newEvent);
     } catch (error) {

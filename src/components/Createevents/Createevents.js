@@ -30,10 +30,10 @@ const Createevents = () => {
       console.log("User ID:", userId);
       const response = await axios.get(`http://localhost:8800/users/${userId}`);
       console.log("User:", response.data.user);
-      setLoggedIn(response.data.user);
+      setLoggedIn(userId);
         
       } catch (error) {
-        console.error('Error fetching friend requests:', error);
+        console.error('Error fetching User', error);
       }
     };
     
@@ -52,7 +52,7 @@ const Createevents = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8800/events/', { ...formData, inviteBy: loggedIn.username }); 
+      const response = await axios.post(`http://localhost:8800/events/${loggedIn}`, { ...formData, inviteBy: loggedIn.username }); 
 
       console.log('Event created:', response.data);
       history.push('/all');
