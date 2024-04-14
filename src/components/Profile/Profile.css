@@ -96,6 +96,7 @@
   
   .accepted {
     color: green;
+    cursor: pointer;
   }
   
   .pending {
