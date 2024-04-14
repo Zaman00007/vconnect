@@ -42,9 +42,11 @@ router.post('/accept/:id', async (req, res) => {
       const eventData = req.body;
       const newEvent = new Accept(eventData);
       const user = await User.findById(req.params.id);
+      const event = await Event.findById(eventData._id);
+      event.acceptedby.push(user.username);
       user.accepted.push(eventData.eventName);
       await user.save();
-      // await newEvent.save();
+      await event.save();
       res.status(201).json(newEvent);
   } catch (error) {
       console.error('Error saving event:', error);

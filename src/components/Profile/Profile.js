@@ -74,13 +74,19 @@ const Profile = () => {
           {events.map((event, index) => (
             
             <div key={index} className="profile-post">
-              {console.log(event)}
+              
               <h3>{event.eventName}</h3>
-              <p>{event.eventDate}</p>
-              <p>{event.eventTime}</p>
-              <p>{event.eventVenue}</p>
-              <p>{event.maxPeople}</p>
-              <p>{event.description}</p>
+              <p className='minute'>{event.eventDate}</p>
+              <p className='minute'>{event.eventTime}</p>
+              <p className='minute'>{event.eventVenue}</p>
+              <p className='minute'>{event.maxPeople}</p>
+              <p className='minute'>{event.description}</p>
+              {event.acceptedby.map((user, index) => (
+                <p key={index} className={user ? "accepted" : "pending"}>
+                {user ? `Accepted by: ${user}` : "Pending"}
+              </p>
+              ))}
+
             </div>
           ))}
         </div>

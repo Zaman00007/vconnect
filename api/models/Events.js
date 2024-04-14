@@ -30,6 +30,10 @@ const EventSchema = new mongoose.Schema({
         type: String,
         
     },
+    acceptedby:{
+        type: [String],
+        
+    },
     // inviteBy:{
     //     type: Schema.Types.ObjectId,
     //     ref: "User"

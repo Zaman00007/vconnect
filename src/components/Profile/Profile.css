@@ -81,7 +81,7 @@
     color: white;
   }
   
-  .profile-post p {
+  .minute {
     margin: 0;
     margin-bottom: 10px;
     font-size: 1rem;
@@ -94,4 +94,10 @@
   }
   
   
+  .accepted {
+    color: green;
+  }
   
+  .pending {
+    color: red;
+  }
