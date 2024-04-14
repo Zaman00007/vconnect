@@ -160,6 +160,7 @@ try{
   }
 
   // Use $pull operator to remove the specific request from the array
+  
   user.requests.pull(requestId);
   user.friends.pull(requestId);
   // Save the updated user document
@@ -175,16 +176,17 @@ try{
 router.put('/:userId/requests/:requestId', async (req, res) => {
   const { userId, requestId } = req.params;
   const user = await User.findById(userId);
+  const request = await User.findOne({username: requestId});
 try{
   if (!user) {
     // Handle case where user is not found
     return res.status(404).json({ message: 'User not found' });
   }
 
-  
+  request.friends.push(user.username);
   user.friends.push(requestId);
 
-  
+  await request.save();
   await user.save();
 
   return res.status(200).json({ message: 'Request deleted successfully', user });
