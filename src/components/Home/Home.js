@@ -149,7 +149,7 @@ const Home = () => {
               <div className="square">
                 <div className="box">
                   <span className="event-name">{event.eventName}</span>
-                  <span className="eventby">{event.description}</span>
+                  <span className="eventby">{event.description}</span><br />
                 
                   <span className="event-name">Schedule :</span>
                   <span className="event-name">{event.eventTime}</span>

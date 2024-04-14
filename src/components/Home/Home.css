@@ -19,10 +19,12 @@
 .trending-events-bar {
   background-color: #4F2671;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .trending-events-text {
   font-weight: bold;
+
 }
 
 .square {
