@@ -111,25 +111,25 @@ const Home = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="page">
       <Nav />
-      <div className="content-container">
-        <div className="main-content">
-          <div className="header">
+      <div className="content">
+        <div className="main">
+          <div className="head">
             <div className="trending-events-bar">
               <span className="trending-events-text">Trending Events Going On</span>
             </div>
           </div>
           {trend.slice(-2).map((event, index) => (
             
-            <div key={index} className="header">
+            <div key={index} className="head">
               <div className="square">
-                <div className="box-content">
+                <div className="box">
                   <span className="event-name">{event.eventName}</span>
                   <p>{event.description}</p>
                   
-                  <button className="ac-button" onClick={() => handleAccept(event)}>Accept</button><br />
-                  <button className="cl" onClick={() => handleDecline(event)}>
+                  <button className="acc-button" onClick={() => handleAccept(event)}>Accept</button><br />
+                  <button className="clo" onClick={() => handleDecline(event)}>
                     <FontAwesomeIcon icon={faTimes} />
                   </button>
                   
@@ -139,21 +139,18 @@ const Home = () => {
             
           ))}
         </div>
-        <div className="main-content">
+        <div className="main">
           <div className="trending-events-bar">
             <span className="trending-events-text">My Events</span>
           </div>
           {events.map((event, index) => (
             <Tilt key={index} >
-            <div className="header">
-              <div className="square-box">
-                <div className="box-content">
+            <div className="head">
+              <div className="square">
+                <div className="box">
                   <span className="event-name">{event.eventName}</span>
                   <span className="eventby">{event.description}</span>
-                </div>
-              </div>
-              <div className="square-box">
-                <div className="box">
+                
                   <span className="event-name">Schedule :</span>
                   <span className="event-name">{event.eventTime}</span>
                   <span className="event-name">{event.eventVenue}</span>

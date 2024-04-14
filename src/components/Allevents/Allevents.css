@@ -1,5 +1,6 @@
 .page-container {
   font-family: Arial, sans-serif;
+  color: white;
 }
 
 .content-container {
@@ -24,16 +25,18 @@
 }
 
 .box-content {
-  color: #4F2671;
+  color: white;
 }
 
 .event-name {
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 
 .event-details {
   margin-top: 10px;
+  color: white;
 }
 
 .acc-button {

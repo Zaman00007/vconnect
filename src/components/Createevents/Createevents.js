@@ -7,6 +7,7 @@ import './Createevents.css';
 import Nav from '../Nav/Nav';
 import Cookies from 'js-cookie';  
 import {jwtDecode} from 'jwt-decode';
+import { set } from 'mongoose';
 
 const Createevents = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,7 @@ const Createevents = () => {
   });
 
   const [loggedIn, setLoggedIn] = useState([]);
+  const [invite, setInvite] = useState(null);
 
   
   useEffect(() => {
@@ -30,6 +32,7 @@ const Createevents = () => {
       console.log("User ID:", userId);
       const response = await axios.get(`http://localhost:8800/users/${userId}`);
       console.log("User:", response.data.user);
+      setInvite(response.data.user)
       setLoggedIn(userId);
         
       } catch (error) {
@@ -52,7 +55,7 @@ const Createevents = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:8800/events/${loggedIn}`, { ...formData, inviteBy: loggedIn.username }); 
+      const response = await axios.post(`http://localhost:8800/events/${loggedIn}`, { ...formData, inviteBy: invite.username }); 
 
       console.log('Event created:', response.data);
       history.push('/all');
