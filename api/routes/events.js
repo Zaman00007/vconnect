@@ -14,6 +14,7 @@ router.post('/:id', async (req, res) => {
         const newEvent = new Event(eventData);
         const user = await User.findById(req.params.id);
         user.accepted.push(eventData.eventName);
+        user.myevents.push(eventData.eventName);
         await user.save();
         await newEvent.save();
         res.status(201).json(newEvent);

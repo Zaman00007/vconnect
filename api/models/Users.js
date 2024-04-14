@@ -29,7 +29,10 @@ const UserSchema = new mongoose.Schema({
     },
     accepted:{
         type: [String]
-    }
+    },
+    myevents:{
+        type: [String]
+    },
 });
 
 UserSchema.methods.updateRequests = async function(newRequest) {
