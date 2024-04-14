@@ -144,8 +144,8 @@ const Home = () => {
             <span className="trending-events-text">My Events</span>
           </div>
           {events.map((event, index) => (
-            <Tilt key={index} >
-            <div className="head">
+            
+            <div key={index} className="head">
               <div className="square">
                 <div className="box">
                   <span className="event-name">{event.eventName}</span>
@@ -158,7 +158,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            </Tilt>
+            
           ))}
         </div>
       </div>
