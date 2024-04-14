@@ -68,7 +68,9 @@ const Profile = () => {
         <div className="profile-bio">
           <p className='pname'>{userData.bio}</p>
         </div>
+        <h2 className='my'>My Events</h2>
         <div className="profile-posts">
+          
           {events.map((event, index) => (
             
             <div key={index} className="profile-post">
