@@ -26,6 +26,7 @@ const SignUp1 = () => {
       history.push('/');
       
     } catch (error) {
+      alert('Username already exists')
       console.error('Error creating user:', error);
       
     }

@@ -68,6 +68,12 @@
   margin-top: 5px;
   cursor: pointer;
 }
+.eventdes {
+  color: #2FC3CD;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
 
 .eventby:hover {
   text-decoration: underline;
